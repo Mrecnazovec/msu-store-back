@@ -1,0 +1,1 @@
+{"version":3,"file":"order-update.dto.js","sourceRoot":"","sources":["../../../src/order/dto/order-update.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,2CAAgD;AAChD,qDAAoD;AAEpD,MAAa,oBAAoB;CAMhC;AAND,oDAMC;AADA;IAJC,IAAA,4BAAU,GAAE;IACZ,IAAA,wBAAM,EAAC,wBAAe,EAAE;QACxB,OAAO,EAAE,0BAA0B;KACnC,CAAC;;oDACqB"}
