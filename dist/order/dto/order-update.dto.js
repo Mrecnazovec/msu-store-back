@@ -17,7 +17,7 @@ class UpdateOrderStatusDto {
 exports.UpdateOrderStatusDto = UpdateOrderStatusDto;
 __decorate([
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsEnum)(client_1.EnumOrderStatus, {
+    (0, class_validator_1.IsString)({
         message: 'Статус заказа обязателен'
     }),
     __metadata("design:type", String)
