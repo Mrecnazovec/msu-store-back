@@ -5,11 +5,12 @@ const app_module_1 = require("./app.module");
 const cookieParser = require("cookie-parser");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
+    console.log(process.env.CLIENT_URL);
     app.use(cookieParser());
     app.enableCors({
-        origin: [process.env.CLIENT_URL],
+        origin: '*',
         credentials: true,
-        exposedHeaders: 'set-cookie'
+        exposedHeaders: ['set-cookie']
     });
     await app.listen(5000);
 }
