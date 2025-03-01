@@ -1,6 +1,5 @@
-import { EnumOrderStatus } from '@prisma/client';
 export declare class OrderCreateDto {
-    status: EnumOrderStatus;
+    status: string;
     currency: string;
     discount: number;
     items: OrderItemDto[];
