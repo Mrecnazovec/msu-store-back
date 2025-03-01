@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
 import { PrismaService } from 'src/prisma.service'
 
-import { hash } from 'argon2'
+import { hash } from '@node-rs/argon2'
 import { AuthDto } from 'src/auth/dto/auth.dto'
 import { UpdateSettingDto } from './dto/update-role.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
