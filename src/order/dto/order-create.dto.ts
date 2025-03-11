@@ -1,8 +1,6 @@
-import { EnumOrderStatus } from '@prisma/client'
 import { Type } from 'class-transformer'
 import {
 	IsArray,
-	IsEnum,
 	IsNumber,
 	IsOptional,
 	IsString,
@@ -11,10 +9,8 @@ import {
 
 export class OrderCreateDto {
 	@IsOptional()
-	@IsEnum(EnumOrderStatus, {
-		message: 'Статус заказа обязателен'
-	})
-	status: EnumOrderStatus
+	@IsString({ message: 'Статус заказа обязателен' })
+	status: string
 
 	@IsString({ message: 'Валюта должна быть строкой' })
 	currency: string

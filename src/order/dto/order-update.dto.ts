@@ -1,10 +1,8 @@
-import { EnumOrderStatus } from '@prisma/client'
-import { IsEnum, IsOptional } from 'class-validator'
+import { IsOptional, IsString } from 'class-validator'
+import { EnumOrderStatus } from 'prisma/__generated__'
 
 export class UpdateOrderStatusDto {
 	@IsOptional()
-	@IsEnum(EnumOrderStatus, {
-		message: 'Статус заказа обязателен'
-	})
+	@IsString({ message: 'Статус заказа обязателен' })
 	status: EnumOrderStatus
 }
