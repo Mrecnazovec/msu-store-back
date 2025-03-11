@@ -13,7 +13,6 @@ FROM base AS build
 COPY . .
 
 RUN yarn prisma generate
-RUN prisma generate
 
 RUN yarn build 
 
@@ -26,6 +25,8 @@ WORKDIR /app
 COPY --from=build /app/package.json /app/yarn.lock
 
 RUN yarn install --production
+
+RUN prisma generate
 
 COPY --from=build /app/dist ./dist 
 COPY --from=build /app/prisma/__generated__ ./prisma/__generated__ 
