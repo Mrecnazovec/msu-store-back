@@ -20,6 +20,8 @@ FROM base AS production
 
 ENV NODE_ENV=production
 
+EXPOSE 5000
+
 WORKDIR /app
 
 COPY --from=build /app/package.json /app/yarn.lock

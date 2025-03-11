@@ -16,6 +16,7 @@ async function bootstrap() {
 		// exposedHeaders: ['set-cookie']
 	})
 
-	await app.listen(config.getOrThrow<number>('APPLICATION_PORT'))
+	const PORT = config.get<number>('APPLICATION_PORT') || 5000
+	await app.listen(PORT, '0.0.0.0')
 }
 bootstrap()
