@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import * as dayjs from 'dayjs'
-import { PrismaService } from 'src/prisma.service'
+import { PrismaService } from 'src/prisma/prisma.service'
 
 dayjs.locale('ru')
 

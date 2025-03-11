@@ -12,7 +12,8 @@ import { StatisticsModule } from './statistics/statistics.module'
 import { ProductModule } from './product/product.module'
 import { ReviewModule } from './review/review.module'
 import { DiscountModule } from './discount/discount.module'
-import { GeoModule } from './geo/geo.module';
+import { GeoModule } from './geo/geo.module'
+import { PrismaModule } from './prisma/prisma.module'
 
 @Module({
 	imports: [
@@ -28,7 +29,8 @@ import { GeoModule } from './geo/geo.module';
 		ProductModule,
 		ReviewModule,
 		DiscountModule,
-		GeoModule
+		GeoModule,
+		PrismaModule
 	]
 })
 export class AppModule {}

@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
-import { OrderService } from './order.service'
+import { PrismaService } from 'src/prisma/prisma.service'
 import { OrderController } from './order.controller'
-import { PrismaService } from 'src/prisma.service'
+import { OrderService } from './order.service'
 import { TelegramService } from './telegram.service'
 
 @Module({

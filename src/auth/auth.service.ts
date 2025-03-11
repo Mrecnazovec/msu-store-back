@@ -6,12 +6,12 @@ import {
 	NotFoundException,
 	UnauthorizedException
 } from '@nestjs/common'
+import { ConfigService } from '@nestjs/config'
 import { JwtService } from '@nestjs/jwt'
-import { PrismaService } from 'src/prisma.service'
+import { Response } from 'express'
+import { PrismaService } from 'src/prisma/prisma.service'
 import { UserService } from 'src/user/user.service'
 import { AuthDto } from './dto/auth.dto'
-import { Response } from 'express'
-import { ConfigService } from '@nestjs/config'
 
 @Injectable()
 export class AuthService {

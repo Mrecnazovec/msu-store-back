@@ -3,11 +3,11 @@ import {
 	NotFoundException,
 	UnauthorizedException
 } from '@nestjs/common'
-import { PrismaService } from 'src/prisma.service'
+import { EnumOrderStatus } from 'prisma/__generated__'
+import { PrismaService } from 'src/prisma/prisma.service'
 import { OrderCreateDto } from './dto/order-create.dto'
 import { UpdateOrderStatusDto } from './dto/order-update.dto'
 import { TelegramService } from './telegram.service'
-import { EnumOrderStatus } from 'prisma/__generated__'
 
 @Injectable()
 export class OrderService {
