@@ -11,9 +11,12 @@ async function bootstrap() {
 
 	app.use(cookieParser())
 	app.enableCors({
-		origin: config.getOrThrow<string>('CLIENT_URL'),
-		credentials: true
-		// exposedHeaders: ['set-cookie']
+		origin: [
+			config.getOrThrow<string>('CLIENT_URL'),
+			'http://85.192.27.161:3000'
+		],
+		credentials: true,
+		exposedHeaders: 'set-cookie'
 	})
 
 	const port = config.getOrThrow<number>('APPLICATION_PORT') || 5000
