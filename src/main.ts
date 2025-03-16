@@ -13,7 +13,7 @@ async function bootstrap() {
 	app.enableCors({
 		origin: [
 			config.getOrThrow<string>('CLIENT_URL'),
-			'http://85.192.27.161:3000'
+			'http://77.239.125.153:3000'
 		],
 		credentials: true,
 		exposedHeaders: 'set-cookie'
