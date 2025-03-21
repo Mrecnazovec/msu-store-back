@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
 import { PrismaService } from 'src/prisma/prisma.service'
 
-import { hash } from 'argon2'
+// import { hash } from 'argon2'
 import { AuthDto } from 'src/auth/dto/auth.dto'
 import { UpdateSettingDto } from './dto/update-role.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
@@ -96,7 +96,7 @@ export class UserService {
 			data: {
 				name: dto.name,
 				email: dto.email,
-				password: await hash(dto.password)
+				password: dto.password
 			}
 		})
 	}

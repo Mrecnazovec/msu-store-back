@@ -82,8 +82,11 @@ export class AuthService {
 	private async validateUser(dto: AuthDto) {
 		const normalizedEmail = dto.email.toLowerCase()
 		const user = await this.userService.getByEmail(normalizedEmail)
+		const password = dto.password
 
 		if (!user) throw new NotFoundException('Пользователь не найден')
+		if (user.password !== password)
+			throw new UnauthorizedException('Неверный пароль')
 
 		return user
 	}
