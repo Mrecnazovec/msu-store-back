@@ -1,11 +1,11 @@
-# ⚙️ MSU Store — Backend
+# MSU Store — Backend
 
 Backend часть интернет-магазина **MSU Store**, реализованная на **NestJS** с использованием **Prisma ORM**, **Postgresql** и JWT-аутентификации.  
 Сервис отвечает за авторизацию, управление пользователями, каталогом товаров, заказами и интеграции с внешними сервисами.  
 
 ---
 
-## ✨ Основные возможности
+## Основные возможности
 - Авторизация и регистрация пользователей (JWT + OAuth: Google, Yandex)  
 - Хэширование паролей (argon2 / bcrypt)  
 - Управление товарами, категориями и заказами  
@@ -18,12 +18,12 @@ Backend часть интернет-магазина **MSU Store**, реализ
 
 ---
 
-## ⚡ Технологии
+## Технологии
 
 ### Core
 - [NestJS 11](https://nestjs.com/) — прогрессивный Node.js фреймворк  
 - [Prisma ORM](https://www.prisma.io/) — работа с базой данных  
-- [PostgreSQL] — основная БД
+- [PostgreSQL](https://www.postgresql.org) — основная БД
 - [JWT + Passport](http://www.passportjs.org/) — аутентификация  
 
 ### Security
